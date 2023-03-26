@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         char* value = evaluate(expression, p_file);
         if(value != NULL)
         {
-            puts(value); //doesn't work (?)
+            puts(value);
         }
         else
         {

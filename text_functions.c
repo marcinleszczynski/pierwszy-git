@@ -230,7 +230,9 @@ char* evaluate(char* expression, struct section_list* p_file)
                 char result[strlen(value1)+strlen(value2)+1];
                 strcpy(result, value1);
                 strcat(result, value2);
-                return result;
+                char* s = calloc(1, strlen(result)+1);
+                strcpy(s, result);
+                return s;
             }
             break;
         case '-':
@@ -281,4 +283,5 @@ char* evaluate(char* expression, struct section_list* p_file)
             }
             break;
     }
+    return NULL;
 }
